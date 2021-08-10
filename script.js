@@ -150,21 +150,24 @@
 
 //task1
 // [ '1: a', '2: b', '3: c' ]
-const number = function (array) {
-    return array.map((item, idx) => `${idx + 1}: ${item}`)
-}
-
-console.log(number(["a", "b", "c"]))
+// const number = function (array) {
+//     return array.map((item, idx) => `${idx + 1}: ${item}`)
+// }
+//
+// console.log(number(["a", "b", "c"]))
 
 //task2
 //[ 0, 3, 4, 6 ]
 //через цикл
 // let capitals = function (word) {
-//     let caps = [];
+//     let result = [];
 //     for(let i = 0; i < word.length; i++) {
-//         if(word[i].toUpperCase() == word[i]) caps.push(i);
+//         if(word[i] === word[i].toUpperCase() ){
+//             // result.push(i)
+//             result = [...result, i]
+//         };
 //     }
-//     return caps;
+//     return result
 // };
 
 // let capitals = function (word) {
@@ -175,4 +178,21 @@ console.log(number(["a", "b", "c"]))
 //     }, [])
 // };
 
-console.log(capitals('CodEWaRs'))
+// console.log(capitals('CodEWaRs'))
+
+//task3 //5
+// function unusualFive() {
+//     str = 'кашык'
+//     return str.length
+// }
+//
+// console.log(unusualFive())
+
+//task4
+// function sortByLength(array) {
+//     return array.sort((a, b) => a.length - b.length)
+// };
+//
+// console.log(sortByLength(["Beg", "Life", "I", "To"]))
+
+//task5
