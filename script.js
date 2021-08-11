@@ -98,7 +98,7 @@
 // console.log(sum([1,3,'5',4])('number'))
 
 
-//Promise
+//===========================Promise
 
 // new Promise ((resolve, reject) =>{
 //
@@ -112,6 +112,12 @@
 // fetch("https://jsonplaceholder.typicode.com/users")// fethc("ссылка") - это метот открывает запрос от бекенда
 // .then((result) => result.json()) // json() - это obj с ключами и значением
 // .then((data) => console.log(data))
+//
+
+// fetch("https://dog.ceo/api/breed/retriever-golden/images/random/3")
+//     .then(res => res.json())
+//     .then(data => console.log(data))
+
 
 // const cat = document.querySelector(".cat")
 // const btn = document.querySelector(".btn")
@@ -195,4 +201,46 @@
 //
 // console.log(sortByLength(["Beg", "Life", "I", "To"]))
 
-//task5
+//=================================================================
+//dog
+// const inputAni = document.querySelector(".input-ani")
+// const btn = document.querySelector(".btn")
+// const dog = document.querySelector(".dog")
+// const notFount = "https://media3.giphy.com/media/8L0Pky6C83SzkzU55a/200.gif"
+//
+// btn.addEventListener("click", () => {
+//
+//     let id = inputAni.value
+//
+//     fetch(`https://dog.ceo/api/breed/${id}/images/random`)
+//         .then(res => res.json())
+//         .then(data => {
+//             if(data.code === 404){
+//                 dog.src = notFount
+//             }else {
+//                 dog.src = data.message
+//             }
+//         })
+// })
+
+// fetch("https://swapi.dev/api/people/")
+// .then(res => res.json())
+// .then(data => {
+//     console.log(data.results.map(el => el.name))
+// })
+
+// const cityInput = document.querySelector(".city")
+// const btnClick = document.querySelector(".btn-click")
+// const min = document.querySelector(".min")
+// const max = document.querySelector(".max")
+//
+// btnClick.addEventListener("click", () => {
+//     let City = cityInput.value
+//     const api_key = "ce459d7581e7705c7010f6ab2baba1a3"
+//     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${api_key}&units=metric`)
+//         .then(res => res.json())
+//         .then(data => {
+//             min.textContent = `Min.temp: ${data.main.temp}`
+//             max.textContent = `Max.temp: ${data.main.temp_max}`
+//         })
+// })
