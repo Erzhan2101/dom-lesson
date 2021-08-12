@@ -244,3 +244,77 @@
 //             max.textContent = `Max.temp: ${data.main.temp_max}`
 //         })
 // })
+
+//Victoria, Puerto Rico
+// function getFirstPython(list) {
+//     let result = list.find(el => el.language === 'Python')
+//     return result ? `${result.firstName}, ${result.country}` : 'There will be no Python developers'
+// }
+//
+// console.log(getFirstPython([
+//     {firstName: 'Mark', lastName: 'G.', country: 'Scotland', continent: 'Europe', age: 22, language: 'JavaScript'},
+//     {firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 30, language: 'Python'},
+//     {firstName: 'Emma', lastName: 'B.', country: 'Norway', continent: 'Europe', age: 19, language: 'Clojure'}
+// ]))
+
+
+// function findSenior(list) {
+//     let a = list.map(el => el.age)
+//     let maxAge = Math.max(...a)
+//     return list.filter(el => el.age === maxAge)
+// }
+//
+// console.log(findSenior([
+//     {firstName: 'Gabriel', lastName: 'X.', country: 'Monaco', continent: 'Europe', age: 49, language: 'PHP'},
+//     {firstName: 'Odval', lastName: 'F.', country: 'Mongolia', continent: 'Asia', age: 38, language: 'Python'},
+//     {firstName: 'Emilija', lastName: 'S.', country: 'Lithuania', continent: 'Europe', age: 19, language: 'Python'},
+//     {firstName: 'Sou', lastName: 'B.', country: 'Japan', continent: 'Asia', age: 49, language: 'PHP'},
+// ]))
+
+// function findUniq(arr) {
+//     return arr.find(item => {
+//        return  arr.indexOf(item) === arr.lastIndexOf(item)
+//     })
+// }
+//
+// console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]))
+// console.log(findUniq([ 0, 0, 0.55, 0, 0 ]))
+
+//3
+// function persistence(num) {
+//     let counter = 0
+//     while (num >= 10) {
+//       num = num.toString().split("").reduce((acc, item) => {
+//             return item * acc
+//         }, 1)
+//         counter++
+//     }
+//     return counter
+// }
+//
+// console.log(persistence(39))
+
+//валюта
+const inputSom = document.querySelector(".input-som")
+const valuteList = document.querySelector(".valute-list")
+const  btn = document.querySelector(".btn")
+const inputResult = document.querySelector(".input-result")
+const sumbol = document.querySelector(".sumbol")
+
+btn.addEventListener("click", () =>{
+    const valute = valuteList.value
+    fetch("https://api.exchangerate.host/latest?base=KGS")
+        .then(res => res.json())
+        .then(data => {
+            inputResult.value = (inputSom.value * data.rates[valute]).toFixed(2)
+        })
+    if(valuteList.value === "USD"){
+        sumbol.innerHTML = "$"
+    }else if(valuteList.value === "EUR"){
+        sumbol.innerHTML = "€"
+    }else if (valuteList.value === "RUB"){
+        sumbol.innerHTML = "₽"
+    }
+})
+
+//country
