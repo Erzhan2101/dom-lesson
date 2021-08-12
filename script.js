@@ -295,26 +295,36 @@
 // console.log(persistence(39))
 
 //валюта
-const inputSom = document.querySelector(".input-som")
-const valuteList = document.querySelector(".valute-list")
-const  btn = document.querySelector(".btn")
-const inputResult = document.querySelector(".input-result")
-const sumbol = document.querySelector(".sumbol")
-
-btn.addEventListener("click", () =>{
-    const valute = valuteList.value
-    fetch("https://api.exchangerate.host/latest?base=KGS")
-        .then(res => res.json())
-        .then(data => {
-            inputResult.value = (inputSom.value * data.rates[valute]).toFixed(2)
-        })
-    if(valuteList.value === "USD"){
-        sumbol.innerHTML = "$"
-    }else if(valuteList.value === "EUR"){
-        sumbol.innerHTML = "€"
-    }else if (valuteList.value === "RUB"){
-        sumbol.innerHTML = "₽"
-    }
-})
+// const inputSom = document.querySelector(".input-som")
+// const valuteList = document.querySelector(".valute-list")
+// const  btn = document.querySelector(".btn")
+// const inputResult = document.querySelector(".input-result")
+// const sumbol = document.querySelector(".sumbol")
+//
+// btn.addEventListener("click", () =>{
+//     const valute = valuteList.value
+//     fetch("https://api.exchangerate.host/latest?base=KGS")
+//         .then(res => res.json())
+//         .then(data => {
+//             inputResult.value = (inputSom.value * data.rates[valute]).toFixed(2)
+//         })
+//     if(valuteList.value === "USD"){
+//         sumbol.innerHTML = "$"
+//     }else if(valuteList.value === "EUR"){
+//         sumbol.innerHTML = "€"
+//     }else if (valuteList.value === "RUB"){
+//         sumbol.innerHTML = "₽"
+//     }
+// })
 
 //country
+const row = document.querySelector(".row")
+fetch("https://restcountries.eu/rest/v2/all")
+    .then(res => res.json())
+    .then(data =>
+      row.innerHTML += data.map(el => `<div class="col-4 box"><img src="${el.flag}">
+     <p>Capital: ${el.capital}</p>
+     <p>Region: ${el.region}</p>
+     <p>Subregion: ${el.subregion}</p>
+     </div>`)
+ )

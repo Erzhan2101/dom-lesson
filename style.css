@@ -19,3 +19,39 @@
 /*    right: 550px;*/
 /*}*/
 
+/*===========country============*/
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row{
+    display:flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+}
+
+.col-4{
+    width: 33.3333%;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+}
+
+.box{
+    border: 2px solid black;
+    margin: 5px 1px;
+}
+
+.box p {
+    margin-left: 10px;
+}
+
+img{
+    height: 200px;
+    width: 300px;
+    border: 1px solid black;
+    object-fit: cover;
+}

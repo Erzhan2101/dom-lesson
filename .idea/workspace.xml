@@ -42,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HTML/T.Pass" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dom-example/dom-list-2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -60,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628103220206</updated>
       <workItem from="1628103221838" duration="5526000" />
-      <workItem from="1628508124585" duration="51170000" />
+      <workItem from="1628508124585" duration="55291000" />
     </task>
     <servers />
   </component>
