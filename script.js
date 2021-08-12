@@ -318,13 +318,41 @@
 // })
 
 //country
-const row = document.querySelector(".row")
-fetch("https://restcountries.eu/rest/v2/all")
-    .then(res => res.json())
-    .then(data =>
-      row.innerHTML += data.map(el => `<div class="col-4 box"><img src="${el.flag}">
-     <p>Capital: ${el.capital}</p>
-     <p>Region: ${el.region}</p>
-     <p>Subregion: ${el.subregion}</p>
-     </div>`)
- )
+// const row = document.querySelector(".row")
+// fetch("https://restcountries.eu/rest/v2/all")
+//     .then(res => res.json())
+//     .then(data =>
+//         row.innerHTML += data.map(el => `<div class="box"><div class="col-4"><img src="${el.flag}"></div>
+//      <p>Capital: ${el.capital}</p>
+//      <p>Region: ${el.region}</p>
+//      <p>Subregion: ${el.subregion}</p>
+//      </div>`)
+//     )
+
+//============= code-wars ===========//
+
+// function bump(x) {
+//     return x.split("").filter(item => item === "n").length <= 15
+//     ? "Woohoo!" : "Car Dead"
+// }
+//
+// console.log(bump("_nnnnnnn_n__n______nn__nn_nnn"))
+
+function disemvowel(str) {
+    return str.split("")
+}
+
+console.log(disemvowel("This website is for losers LOL!"))
+
+// function switcheroo(x) {
+//     return x.split("").map(el => {
+//         if (el === "a") {
+//             return "b"
+//         } else if (el === "b") {
+//             return "a"
+//         }
+//         return "c"
+//     }).join("")
+// }
+//
+// console.log(switcheroo("aaabcccbaaa"))

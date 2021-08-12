@@ -42,12 +42,9 @@
 
 .box{
     border: 2px solid black;
-    margin: 5px 1px;
 }
 
-.box p {
-    margin-left: 10px;
-}
+
 
 img{
     height: 200px;
