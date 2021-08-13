@@ -339,7 +339,8 @@
 // console.log(bump("_nnnnnnn_n__n______nn__nn_nnn"))
 
 function disemvowel(str) {
-    return str.split("")
+    return str.split("").map(el => el.replace(/i/g, "")).join('')
+
 }
 
 console.log(disemvowel("This website is for losers LOL!"))
