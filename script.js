@@ -322,7 +322,8 @@
 // fetch("https://restcountries.eu/rest/v2/all")
 //     .then(res => res.json())
 //     .then(data =>
-//         row.innerHTML += data.map(el => `<div class="box"><div class="col-4"><img src="${el.flag}"></div>
+//         row.innerHTML += data.map(el => `<div class="box container"><div class="col-4"><img src="${el.flag}"></div>
+//      <p>Name: ${el.name}</p>
 //      <p>Capital: ${el.capital}</p>
 //      <p>Region: ${el.region}</p>
 //      <p>Subregion: ${el.subregion}</p>
@@ -338,12 +339,13 @@
 //
 // console.log(bump("_nnnnnnn_n__n______nn__nn_nnn"))
 
-function disemvowel(str) {
-    return str.split("").map(el => el.replace(/i/g, "")).join('')
+// function disemvowel(str) {
+//     return str.split("").map(el => el.replace(/i/g, "")).join('')
+//
+// }
+//
+// console.log(disemvowel("This website is for losers LOL!"))
 
-}
-
-console.log(disemvowel("This website is for losers LOL!"))
 
 // function switcheroo(x) {
 //     return x.split("").map(el => {
@@ -357,3 +359,13 @@ console.log(disemvowel("This website is for losers LOL!"))
 // }
 //
 // console.log(switcheroo("aaabcccbaaa"))
+
+//================= code-wars ==============//
+// Remove duplicate words ['alpha beta gamma delta']
+
+function removeDuplicateWords (s) {
+    return s.split(" ").filter((item, ind, arr) => ind === arr.indexOf(item) ).join(" ")
+}
+
+console.log(removeDuplicateWords('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'))
+
