@@ -361,11 +361,26 @@
 // console.log(switcheroo("aaabcccbaaa"))
 
 //================= code-wars ==============//
-// Remove duplicate words ['alpha beta gamma delta']
+//task --- Remove duplicate words ['alpha beta gamma delta']
 
-function removeDuplicateWords (s) {
-    return s.split(" ").filter((item, ind, arr) => ind === arr.indexOf(item) ).join(" ")
+// function removeDuplicateWords (s) {
+//     return s.split(" ").filter((item, ind, arr) => ind === arr.indexOf(item) ).join(" ")
+// }
+//
+// console.log(removeDuplicateWords('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'))
+
+// task -- Generate range of integer
+// function generateRange(min, max, step){
+// let array = []
+//     for (let i = min; i <= max; i += step){
+//         array.push(i)
+//     }
+//     return array
+// }
+//
+// console.log(generateRange(2, 10, 2))
+
+// task -- Last Survivor
+function lastSurvivor(letters, coords) {
+
 }
-
-console.log(removeDuplicateWords('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'))
-
