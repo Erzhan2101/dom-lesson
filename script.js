@@ -381,14 +381,54 @@
 // console.log(generateRange(2, 10, 2))
 
 // task -- Last Survivor
-function lastSurvivor(letters, coords) {
-let arr = letters.split('')
-    for (let i = 0; i < coords.length; i++){
-        arr.splice(coords[i], 1)
+// function lastSurvivor(letters, coords) {
+// let arr = letters.split('')
+//     for (let i = 0; i < coords.length; i++){
+//         arr.splice(coords[i], 1)
+//     }
+//     return arr.join('')
+// }
+//
+// // hi insts: erjan2101
+//
+// console.log(lastSurvivor('hgf', [0, 1]))
+
+
+//========= hw-ATM =====//
+
+function atm(sum) {
+    const atmBanknotes = [100, 50, 25, 5, 1];
+    const result = [];
+
+    if (sum > 0) {
+        for (let i = 0; i < atmBanknotes.length; i++) {
+            let note = atmBanknotes[i];
+
+            while (sum - note >= 0) {
+                sum -= note
+                result.push(note)
+            }
+        }
+    } else {
+        return "err"
     }
-    return arr.join('')
+    return result
+
 }
 
-// hi insts: erjan2101
+console.log(atm(357))
 
-console.log(lastSurvivor('hgf', [0, 1]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
