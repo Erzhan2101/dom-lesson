@@ -419,11 +419,16 @@ function atm(sum) {
 console.log(atm(357))
 
 
+const numberToPower = (number, power) => Math.pow(number, power)
 
+console.log(numberToPower(4, 2))
 
-
-
-
+// function joinStrings(string1, string2) {
+//     return string1.concat(string2).join(" ")
+// }
+//
+// // console.log(joinStrings(134, 234))
+// console.log(joinStrings('testing', 'testing'))
 
 
 
