@@ -399,41 +399,32 @@
 function atm(sum) {
     const atmBanknotes = [100, 50, 25, 5, 1];
     const result = [];
-
-    if (sum > 0) {
         for (let i = 0; i < atmBanknotes.length; i++) {
-            let note = atmBanknotes[i];
-
-            while (sum - note >= 0) {
-                sum -= note
-                result.push(note)
+            while (sum - atmBanknotes[i] >= 0) {
+                sum -= atmBanknotes[i]
+                result.push(atmBanknotes[i])
             }
-        }
-    } else {
-        return "err"
     }
     return result
-
 }
 
 console.log(atm(357))
+//
+//
 
+//------------ lesson 16.08.21 --------//
 
-const numberToPower = (number, power) => Math.pow(number, power)
-
-console.log(numberToPower(4, 2))
-
-// function joinStrings(string1, string2) {
-//     return string1.concat(string2).join(" ")
+// const axios = require('axios')
+//
+// const getUserPerson = async () =>{
+//     const {data:users} = await axios('https://jsonplaceholder.typicode.com/users')
+//     const {data:posts} = await axios('https://jsonplaceholder.typicode.com/posts')
+//     const userPost = users.map(async (user) => {
+//         user.posts = JSON.stringify(posts.filter(post => post.userId === user.id))
+//         return user
+//         })
+//     console.log(userPost)
 // }
 //
-// // console.log(joinStrings(134, 234))
-// console.log(joinStrings('testing', 'testing'))
-
-
-
-
-
-
-
+// getUserPerson()
 
